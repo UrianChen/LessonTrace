@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+frontend/dist/
+# 录像和课件不进仓库（版权和体积），获取方式见 README
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+# 下载的公开课录像和课件（MIT OCW，CC BY-NC-SA），不进仓库
+test-data/

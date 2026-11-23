@@ -1,0 +1,3 @@
+# Keep LF everywhere so files built into Linux containers are identical on Windows
+* text=auto eol=lf
+*.png binary

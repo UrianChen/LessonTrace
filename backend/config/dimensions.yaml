@@ -1,0 +1,24 @@
+# 分析维度。name 是模型输出和数据库里使用的值；改动后重启 api 和 worker 生效。
+# requires_slides: 课件一页都没对齐上时跳过该维度。
+dimensions:
+  - name: Structure and pacing
+    name_zh: 结构与节奏
+    definition: >
+      How the lesson is organised and how time is spent: openings and closings,
+      transitions between topics, signposting, and whether parts feel rushed or drawn out.
+  - name: Questioning and interaction
+    name_zh: 提问与互动
+    definition: >
+      The questions the teacher asks, how long students get to respond, how student
+      answers are followed up, and who is doing the talking.
+  - name: Clarity of explanation
+    name_zh: 讲解清晰度
+    definition: >
+      How concepts are explained: definitions, examples, analogies, step-by-step
+      reasoning, and checks that students are following.
+  - name: Alignment with slides
+    name_zh: 与课件的一致性
+    requires_slides: true
+    definition: >
+      How what is said relates to what is on the slides: content on a slide that is
+      skipped, spoken content that goes beyond the slide, and mismatches between the two.

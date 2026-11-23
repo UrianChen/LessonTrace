@@ -1,0 +1,71 @@
+# LessonTrace 单机部署。只有 nginx 映射宿主机端口，其余服务只在容器网络内互相访问。
+#   docker compose up -d --build      然后浏览器打开 http://localhost
+services:
+  nginx:
+    image: nginx:1.28.0-alpine
+    ports: ["${HTTP_PORT:-80}:80"]
+    volumes: ["./nginx/conf.d:/etc/nginx/conf.d:ro"]
+    depends_on: [web, api, minio]
+    restart: unless-stopped
+
+  web:
+    build: ./frontend          # 构建后的静态文件
+    restart: unless-stopped
+
+  api:
+    build: ./backend
+    env_file: .env
+    expose: ["8000"]           # 不映射到宿主机
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_started }
+      minio: { condition: service_started }
+    restart: unless-stopped
+
+  worker:
+    build: ./backend
+    command: celery -A app.worker worker --concurrency=1 --loglevel=info
+    env_file: .env
+    depends_on:
+      api: { condition: service_started }
+    restart: unless-stopped
+
+  asr:
+    build: ./asr               # 语音转写服务，使用 GPU
+    env_file: .env
+    volumes: ["asrmodels:/models"]      # 模型缓存，重建容器不用重新下载
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17.7-alpine
+    env_file: .env
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4.2-alpine
+    restart: unless-stopped
+
+  minio:
+    build: ./minio             # 官方镜像已下线，从官方源码的固定版本构建，见 minio/Dockerfile
+    command: server /data
+    env_file: .env
+    volumes: ["miniodata:/data"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  miniodata:
+  asrmodels:

@@ -1,0 +1,491 @@
+{
+ "_about": "Input for `python -m app.cli analyze`. Generated from limits_intro.json (synthetic sample lesson).",
+ "segments": [
+  {
+   "id": "S001",
+   "start_ms": 1000,
+   "end_ms": 36367,
+   "slide_page": 1,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 1000,
+     "end_ms": 3553,
+     "text": "Good morning everyone, let's get started."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 3903,
+     "end_ms": 14115,
+     "text": "Last week we finished our review of functions, and today we begin the first really new idea of this course, which is the limit."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 14465,
+     "end_ms": 17019,
+     "text": "Here is the plan for today."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 17369,
+     "end_ms": 23326,
+     "text": "First I want to give you the idea of a limit in plain words."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 23676,
+     "end_ms": 28782,
+     "text": "Then we will look at a famous example, sine x over x."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 29132,
+     "end_ms": 36367,
+     "text": "After that we will talk about one-sided limits, and finally about when a limit does not exist."
+    }
+   ]
+  },
+  {
+   "id": "S002",
+   "start_ms": 36717,
+   "end_ms": 116705,
+   "slide_page": 2,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 36717,
+     "end_ms": 46929,
+     "text": "By the end of the hour you should be able to read a limit statement and say in your own words what it means."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 50279,
+     "end_ms": 52407,
+     "text": "So what is a limit?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 52757,
+     "end_ms": 58714,
+     "text": "A limit describes the value a function approaches as the input approaches some point."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 59064,
+     "end_ms": 62043,
+     "text": "Notice that I said approaches, not equals."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 62393,
+     "end_ms": 67500,
+     "text": "The function does not even need to be defined at that point."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 67850,
+     "end_ms": 70403,
+     "text": "Think about walking toward a door."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 70753,
+     "end_ms": 75008,
+     "text": "With every step you cover half of the remaining distance."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 75358,
+     "end_ms": 81741,
+     "text": "You get closer and closer to the door, but you never actually step through it."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 82091,
+     "end_ms": 85495,
+     "text": "The door is the limit of your position."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 85845,
+     "end_ms": 93079,
+     "text": "We write it like this: the limit of f of x, as x approaches a, equals L."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 93429,
+     "end_ms": 101089,
+     "text": "Read it out loud with me: the limit of f of x, as x approaches a, equals L."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 101439,
+     "end_ms": 109524,
+     "text": "The letter a is where the input is heading, and the letter L is where the output is heading."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 111074,
+     "end_ms": 113627,
+     "text": "Does that make sense to everyone?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 114577,
+     "end_ms": 116705,
+     "text": "Okay, good, let's keep going."
+    }
+   ]
+  },
+  {
+   "id": "S003",
+   "start_ms": 120555,
+   "end_ms": 210279,
+   "slide_page": 3,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 120555,
+     "end_ms": 122682,
+     "text": "Now for the famous example."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 123032,
+     "end_ms": 128139,
+     "text": "Take the function f of x equals sine x divided by x."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 128489,
+     "end_ms": 131468,
+     "text": "What happens if we plug in zero?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 132218,
+     "end_ms": 139452,
+     "text": "We get zero over zero, which is not defined, so the function has no value at zero."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 139802,
+     "end_ms": 144057,
+     "text": "But we can still ask what the function is approaching."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 144407,
+     "end_ms": 147386,
+     "text": "Look at the table on this slide."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 147736,
+     "end_ms": 154119,
+     "text": "When x is zero point five, the ratio is about zero point nine five nine."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 154469,
+     "end_ms": 160426,
+     "text": "When x is zero point one, it is about zero point nine nine eight."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 160776,
+     "end_ms": 167585,
+     "text": "When x is zero point zero one, it is zero point nine nine nine nine eight."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 167935,
+     "end_ms": 171339,
+     "text": "The ratio gets closer and closer to one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 171689,
+     "end_ms": 174242,
+     "text": "So what does this limit equal?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 175092,
+     "end_ms": 176794,
+     "text": "Right, it equals one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 177144,
+     "end_ms": 185229,
+     "text": "On the graph you can see a smooth curve with a tiny hole at the point zero comma one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 185579,
+     "end_ms": 194941,
+     "text": "The hole is exactly the door from our picture: the curve walks up to it from both sides and never steps through."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 195291,
+     "end_ms": 201248,
+     "text": "We will prove this properly next week, so for today just trust the table."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 205598,
+     "end_ms": 210279,
+     "text": "Before we move on, I want you to try one yourselves."
+    }
+   ]
+  },
+  {
+   "id": "S004",
+   "start_ms": 210629,
+   "end_ms": 259768,
+   "slide_page": 4,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 210629,
+     "end_ms": 220842,
+     "text": "Take thirty seconds and work out, with your neighbour, what x squared minus one over x minus one approaches as x goes to one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 235192,
+     "end_ms": 237320,
+     "text": "Okay, what did you get?"
+    },
+    {
+     "speaker": "student",
+     "start_ms": 240270,
+     "end_ms": 247929,
+     "text": "We factored the top, so it cancels and you get x plus one, and that goes to two."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 248779,
+     "end_ms": 256439,
+     "text": "Exactly, the factor x minus one cancels, and what is left is x plus one, which approaches two."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 256789,
+     "end_ms": 259768,
+     "text": "And did anyone try a table instead?"
+    }
+   ]
+  },
+  {
+   "id": "S005",
+   "start_ms": 263218,
+   "end_ms": 318577,
+   "slide_page": 4,
+   "sentences": [
+    {
+     "speaker": "student",
+     "start_ms": 263218,
+     "end_ms": 271728,
+     "text": "We did, we tried zero point nine and one point one and got one point nine and two point one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 272478,
+     "end_ms": 279287,
+     "text": "Good, so two different methods agree, and that should make you more confident in the answer."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 279637,
+     "end_ms": 286445,
+     "text": "Notice again that the function is not defined at one, and the limit does not care."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 289795,
+     "end_ms": 293200,
+     "text": "Now let us move on to one-sided limits."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 293549,
+     "end_ms": 296954,
+     "text": "Sometimes it matters which direction you come from."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 297304,
+     "end_ms": 302410,
+     "text": "The left-hand limit means x approaches a from below, through smaller values."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 302760,
+     "end_ms": 307867,
+     "text": "The right-hand limit means x approaches a from above, through larger values."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 308217,
+     "end_ms": 312046,
+     "text": "The two-sided limit exists only if both sides agree."
+    },
+    {
+     "speaker": "student",
+     "start_ms": 313896,
+     "end_ms": 318577,
+     "text": "Is the left limit always the same as the right limit?"
+    }
+   ]
+  },
+  {
+   "id": "S006",
+   "start_ms": 319627,
+   "end_ms": 365356,
+   "slide_page": 4,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 319627,
+     "end_ms": 322606,
+     "text": "Good question, and the answer is no."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 322956,
+     "end_ms": 329764,
+     "text": "Think of the step function, which is zero for negative inputs and one for positive inputs."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 330114,
+     "end_ms": 335221,
+     "text": "From the left you are walking along the floor at height zero."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 335571,
+     "end_ms": 340677,
+     "text": "From the right you are walking along a shelf at height one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 341027,
+     "end_ms": 346134,
+     "text": "So the left-hand limit is zero and the right-hand limit is one."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 346484,
+     "end_ms": 352015,
+     "text": "They disagree, so we say the two-sided limit at zero does not exist."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 352365,
+     "end_ms": 354919,
+     "text": "Why do we care about this?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 355569,
+     "end_ms": 365356,
+     "text": "Because later, when we define continuity and the derivative, both of them are built out of limits that must agree from both sides."
+    }
+   ]
+  },
+  {
+   "id": "S007",
+   "start_ms": 366706,
+   "end_ms": 416132,
+   "slide_page": 5,
+   "sentences": [
+    {
+     "speaker": "teacher",
+     "start_ms": 366706,
+     "end_ms": 368834,
+     "text": "Any questions about one-sided limits?"
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 369984,
+     "end_ms": 371184,
+     "text": "No? Okay."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 374534,
+     "end_ms": 377512,
+     "text": "Let me summarise what we did today."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 377862,
+     "end_ms": 380841,
+     "text": "A limit is about approaching, not arriving."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 381191,
+     "end_ms": 385872,
+     "text": "The function does not need to be defined at the point."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 386222,
+     "end_ms": 390903,
+     "text": "And before you claim that a limit exists, check both sides."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 391253,
+     "end_ms": 396785,
+     "text": "For practice, please do problems one to six on the worksheet before Thursday."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 397135,
+     "end_ms": 404794,
+     "text": "Problems five and six are one-sided limits, so look back at the step function if you get stuck."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 405144,
+     "end_ms": 413229,
+     "text": "Next time we will learn the limit laws, which let us compute limits without building a table every time."
+    },
+    {
+     "speaker": "teacher",
+     "start_ms": 413579,
+     "end_ms": 416132,
+     "text": "Thank you, see you on Thursday."
+    }
+   ]
+  }
+ ],
+ "slides": [
+  {
+   "page_no": 1,
+   "text": "An Introduction to Limits\nCalculus I, Week 3\nToday: the idea of a limit; a famous example, sine x over x; one-sided limits; when a limit does not exist"
+  },
+  {
+   "page_no": 2,
+   "text": "The idea of a limit\nA limit describes the value a function approaches as the input approaches a point\nThe function does not need to be defined at that point\nNotation: lim f(x) = L as x approaches a\nEveryday picture: walking toward a door without stepping through it"
+  },
+  {
+   "page_no": 3,
+   "text": "A famous example: sine x over x\nf(x) = sin(x) / x is not defined at x = 0\nTable of values: x = 0.5, 0.1, 0.01, 0.001\nThe ratio gets closer and closer to 1\nGraph: a hole at the point (0, 1)\nSqueeze theorem (proof next week)"
+  },
+  {
+   "page_no": 4,
+   "text": "One-sided limits\nLeft-hand limit: x approaches a from below\nRight-hand limit: x approaches a from above\nThe two-sided limit exists only if both sides agree\nExample: the step function at zero\nInfinite limits and vertical asymptotes"
+  },
+  {
+   "page_no": 5,
+   "text": "Summary and practice\nA limit is about approaching, not arriving\nCheck both sides before you claim a limit exists\nPractice: problems 1 to 6 on the worksheet\nNext time: limit laws"
+  }
+ ]
+}

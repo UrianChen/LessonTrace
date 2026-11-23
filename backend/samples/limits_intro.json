@@ -1,0 +1,152 @@
+{
+  "_about": "Synthetic sample lesson written for LessonTrace. Not a recording of a real class. Times are generated from word counts by scripts/seed_demo.py; the findings below were written by hand and pass through the same evidence validator as model output.",
+  "title": "Calculus I — An Introduction to Limits (sample)",
+  "taught_on": "2026-11-16",
+  "slides": [
+    "An Introduction to Limits\nCalculus I, Week 3\nToday: the idea of a limit; a famous example, sine x over x; one-sided limits; when a limit does not exist",
+    "The idea of a limit\nA limit describes the value a function approaches as the input approaches a point\nThe function does not need to be defined at that point\nNotation: lim f(x) = L as x approaches a\nEveryday picture: walking toward a door without stepping through it",
+    "A famous example: sine x over x\nf(x) = sin(x) / x is not defined at x = 0\nTable of values: x = 0.5, 0.1, 0.01, 0.001\nThe ratio gets closer and closer to 1\nGraph: a hole at the point (0, 1)\nSqueeze theorem (proof next week)",
+    "One-sided limits\nLeft-hand limit: x approaches a from below\nRight-hand limit: x approaches a from above\nThe two-sided limit exists only if both sides agree\nExample: the step function at zero\nInfinite limits and vertical asymptotes",
+    "Summary and practice\nA limit is about approaching, not arriving\nCheck both sides before you claim a limit exists\nPractice: problems 1 to 6 on the worksheet\nNext time: limit laws"
+  ],
+  "script": [
+    ["teacher", 0, "Good morning everyone, let's get started."],
+    ["teacher", 0, "Last week we finished our review of functions, and today we begin the first really new idea of this course, which is the limit."],
+    ["teacher", 0, "Here is the plan for today."],
+    ["teacher", 0, "First I want to give you the idea of a limit in plain words."],
+    ["teacher", 0, "Then we will look at a famous example, sine x over x."],
+    ["teacher", 0, "After that we will talk about one-sided limits, and finally about when a limit does not exist."],
+    ["teacher", 0, "By the end of the hour you should be able to read a limit statement and say in your own words what it means."],
+
+    ["teacher", 3, "So what is a limit?"],
+    ["teacher", 0, "A limit describes the value a function approaches as the input approaches some point."],
+    ["teacher", 0, "Notice that I said approaches, not equals."],
+    ["teacher", 0, "The function does not even need to be defined at that point."],
+    ["teacher", 0, "Think about walking toward a door."],
+    ["teacher", 0, "With every step you cover half of the remaining distance."],
+    ["teacher", 0, "You get closer and closer to the door, but you never actually step through it."],
+    ["teacher", 0, "The door is the limit of your position."],
+    ["teacher", 0, "We write it like this: the limit of f of x, as x approaches a, equals L."],
+    ["teacher", 0, "Read it out loud with me: the limit of f of x, as x approaches a, equals L."],
+    ["teacher", 0, "The letter a is where the input is heading, and the letter L is where the output is heading."],
+    ["teacher", 1.2, "Does that make sense to everyone?"],
+    ["teacher", 0.6, "Okay, good, let's keep going."],
+
+    ["teacher", 3.5, "Now for the famous example."],
+    ["teacher", 0, "Take the function f of x equals sine x divided by x."],
+    ["teacher", 0, "What happens if we plug in zero?"],
+    ["teacher", 0.4, "We get zero over zero, which is not defined, so the function has no value at zero."],
+    ["teacher", 0, "But we can still ask what the function is approaching."],
+    ["teacher", 0, "Look at the table on this slide."],
+    ["teacher", 0, "When x is zero point five, the ratio is about zero point nine five nine."],
+    ["teacher", 0, "When x is zero point one, it is about zero point nine nine eight."],
+    ["teacher", 0, "When x is zero point zero one, it is zero point nine nine nine nine eight."],
+    ["teacher", 0, "The ratio gets closer and closer to one."],
+    ["teacher", 0, "So what does this limit equal?"],
+    ["teacher", 0.5, "Right, it equals one."],
+    ["teacher", 0, "On the graph you can see a smooth curve with a tiny hole at the point zero comma one."],
+    ["teacher", 0, "The hole is exactly the door from our picture: the curve walks up to it from both sides and never steps through."],
+    ["teacher", 0, "We will prove this properly next week, so for today just trust the table."],
+
+    ["teacher", 4, "Before we move on, I want you to try one yourselves."],
+    ["teacher", 0, "Take thirty seconds and work out, with your neighbour, what x squared minus one over x minus one approaches as x goes to one."],
+    ["teacher", 14, "Okay, what did you get?"],
+    ["student", 2.6, "We factored the top, so it cancels and you get x plus one, and that goes to two."],
+    ["teacher", 0.5, "Exactly, the factor x minus one cancels, and what is left is x plus one, which approaches two."],
+    ["teacher", 0, "And did anyone try a table instead?"],
+    ["student", 3.1, "We did, we tried zero point nine and one point one and got one point nine and two point one."],
+    ["teacher", 0.4, "Good, so two different methods agree, and that should make you more confident in the answer."],
+    ["teacher", 0, "Notice again that the function is not defined at one, and the limit does not care."],
+
+    ["teacher", 3, "Now let us move on to one-sided limits."],
+    ["teacher", 0, "Sometimes it matters which direction you come from."],
+    ["teacher", 0, "The left-hand limit means x approaches a from below, through smaller values."],
+    ["teacher", 0, "The right-hand limit means x approaches a from above, through larger values."],
+    ["teacher", 0, "The two-sided limit exists only if both sides agree."],
+    ["student", 1.5, "Is the left limit always the same as the right limit?"],
+    ["teacher", 0.7, "Good question, and the answer is no."],
+    ["teacher", 0, "Think of the step function, which is zero for negative inputs and one for positive inputs."],
+    ["teacher", 0, "From the left you are walking along the floor at height zero."],
+    ["teacher", 0, "From the right you are walking along a shelf at height one."],
+    ["teacher", 0, "So the left-hand limit is zero and the right-hand limit is one."],
+    ["teacher", 0, "They disagree, so we say the two-sided limit at zero does not exist."],
+    ["teacher", 0, "Why do we care about this?"],
+    ["teacher", 0.3, "Because later, when we define continuity and the derivative, both of them are built out of limits that must agree from both sides."],
+    ["teacher", 1, "Any questions about one-sided limits?"],
+    ["teacher", 0.8, "No? Okay."],
+
+    ["teacher", 3, "Let me summarise what we did today."],
+    ["teacher", 0, "A limit is about approaching, not arriving."],
+    ["teacher", 0, "The function does not need to be defined at the point."],
+    ["teacher", 0, "And before you claim that a limit exists, check both sides."],
+    ["teacher", 0, "For practice, please do problems one to six on the worksheet before Thursday."],
+    ["teacher", 0, "Problems five and six are one-sided limits, so look back at the step function if you get stuck."],
+    ["teacher", 0, "Next time we will learn the limit laws, which let us compute limits without building a table every time."],
+    ["teacher", 0, "Thank you, see you on Thursday."]
+  ],
+  "titles": [
+    [0, "Opening and plan for the lesson"],
+    [7, "The idea of a limit: approaching, not equalling"],
+    [20, "Sine x over x near zero"],
+    [37, "Pair task: a limit by factoring and by table"],
+    [44, "One-sided limits: left and right"],
+    [52, "The step function: when the two sides disagree"],
+    [60, "Summary and homework"]
+  ],
+  "findings": [
+    {
+      "dimension": "Structure and pacing",
+      "observation": "The lesson opens with a spoken outline of its four parts and states what students should be able to do by the end.",
+      "suggestion": "Keep this opening. Returning to the same outline at each transition would let students see where they are in the plan.",
+      "quotes": ["Here is the plan for today.", "By the end of the hour you should be able to read a limit statement and say in your own words what it means."]
+    },
+    {
+      "dimension": "Structure and pacing",
+      "observation": "The closing summary restates the two main ideas in short sentences and links the homework problems to the step function example from the lesson.",
+      "suggestion": "Consider asking a student to state one of the summary points first, then confirming it, so the recap also works as a quick check.",
+      "quotes": ["A limit is about approaching, not arriving.", "Problems five and six are one-sided limits, so look back at the step function if you get stuck."]
+    },
+    {
+      "dimension": "Questioning and interaction",
+      "observation": "The question about the value of the limit was answered by the teacher about half a second after it was asked, before any student responded.",
+      "suggestion": "Pause for a few seconds after asking, or ask students to write their answer down before you confirm it.",
+      "quotes": ["So what does this limit equal?"]
+    },
+    {
+      "dimension": "Questioning and interaction",
+      "observation": "The two comprehension checks were whole-class yes/no questions, and the lesson continued within about a second each time without a student reply.",
+      "suggestion": "Replace one of them with a question that needs a content answer, for example asking a student to say what the letters a and L stand for.",
+      "quotes": ["Does that make sense to everyone?", "Any questions about one-sided limits?"]
+    },
+    {
+      "dimension": "Questioning and interaction",
+      "observation": "In the pair task, students had time to work before the question was asked, two different student methods were heard, and the second was invited explicitly.",
+      "suggestion": "This pattern produced the longest student contributions of the lesson; a similar short task could be used in the sine x over x part.",
+      "quotes": ["And did anyone try a table instead?", "Good, so two different methods agree, and that should make you more confident in the answer."]
+    },
+    {
+      "dimension": "Clarity of explanation",
+      "observation": "The door picture introduced with the definition is picked up again when the graph of sine x over x is described, tying the new example back to the first idea.",
+      "suggestion": "The same picture could be reused once more for the step function, where the two sides walk toward different doors.",
+      "quotes": ["You get closer and closer to the door, but you never actually step through it.", "The hole is exactly the door from our picture: the curve walks up to it from both sides and never steps through."]
+    },
+    {
+      "dimension": "Clarity of explanation",
+      "observation": "A student's question about whether the two one-sided limits always agree is answered directly and then illustrated with a concrete floor-and-shelf description of the step function.",
+      "suggestion": "After the illustration, asking the student who raised the question to restate the conclusion would show whether the explanation landed.",
+      "quotes": ["Good question, and the answer is no.", "From the right you are walking along a shelf at height one."]
+    },
+    {
+      "dimension": "Alignment with slides",
+      "observation": "The slide for the sine x over x example lists the squeeze theorem; in the lesson it is referred to only as a proof that will come next week, without being named.",
+      "suggestion": "Either name the theorem when deferring it, so students can connect the slide to what was said, or remove the line from this week's slide.",
+      "quotes": ["We will prove this properly next week, so for today just trust the table."]
+    },
+    {
+      "dimension": "Alignment with slides",
+      "observation": "The one-sided limits slide ends with a line on infinite limits and vertical asymptotes, which is not mentioned while that slide is being discussed.",
+      "suggestion": "Tell students whether that line is for a later lesson, or move it to the slide deck for the session where it is taught.",
+      "quotes": ["They disagree, so we say the two-sided limit at zero does not exist."]
+    }
+  ]
+}
